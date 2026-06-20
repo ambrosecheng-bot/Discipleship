@@ -46,6 +46,9 @@ nav{
 .nav-lang{display:flex;gap:2px;background:rgba(0,0,0,0.25);border-radius:20px;padding:3px 6px;}
 .nav-lang button{background:none;border:none;cursor:pointer;font-size:12px;color:rgba(242,232,213,0.45);padding:2px 10px;border-radius:14px;font-family:'Noto Sans TC',sans-serif;transition:all 0.2s;}
 .nav-lang button.active{background:var(--lamp);color:var(--parchment);font-weight:500;}
+.nav-icons{display:flex;align-items:center;}
+.nav-icon{font-size:18px;color:rgba(242,232,213,0.6);cursor:pointer;padding:4px 10px;background:none;border:none;transition:color 0.2s;line-height:1;}
+.nav-icon:hover{color:var(--lamp-glow);}
 
 /* ── Hero ── */
 .hero{
@@ -124,6 +127,31 @@ nav{
   text-shadow:0 0 14px rgba(255,255,255,0.80), 0 0 28px rgba(255,255,255,0.55);
 }
 
+/* ── Hero Primary CTA ── */
+.hero-cta-wrap{margin-top:1.5rem;}
+.hero-primary-cta{
+  display:inline-block;
+  background:var(--lamp);
+  color:var(--parchment);
+  border-radius:4px;
+  padding:14px 32px;
+  font-size:15px;
+  font-family:'Noto Serif TC',serif;
+  font-weight:500;
+  letter-spacing:0.04em;
+  margin-bottom:1.5rem;
+  text-decoration:none;
+  transition:background 0.22s;
+  cursor:pointer;
+}
+.hero-primary-cta:hover{background:var(--lamp-glow);}
+.hero-cta-note{
+  font-size:12px;
+  color:rgba(255,255,255,0.7);
+  font-family:'Noto Sans TC',sans-serif;
+  margin-top:-0.75rem;
+}
+
 /* Scroll hint */
 @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(5px);}}
 .scroll-hint{
@@ -135,12 +163,45 @@ nav{
 
 .ornament-divider{text-align:center;padding:1.5rem 0 0.5rem;color:var(--stone);font-size:18px;letter-spacing:0.3em;opacity:0.6;}
 
+/* ── Hero Social Proof Strip ── */
+.hero-proof{
+  position:relative;z-index:10;
+  display:flex;flex-direction:column;align-items:center;
+  padding:0 2rem 1.2rem;
+  gap:10px;
+}
+.hero-proof-avatars{
+  display:flex;align-items:center;
+}
+.hero-proof-avatar{
+  width:64px;height:64px;border-radius:50%;
+  border:2.5px solid var(--lamp-glow);
+  background:var(--parchment-dark);
+  object-fit:cover;
+  margin-left:-10px;
+  flex-shrink:0;
+  box-shadow:0 0 0 2px rgba(0,0,0,0.35);
+}
+.hero-proof-avatar:first-child{margin-left:0;}
+.hero-proof-label{
+  font-family:'Noto Sans TC',sans-serif;
+  font-size:13px;
+  color:rgba(242,232,213,0.88);
+  letter-spacing:0.04em;
+  text-align:center;
+  text-shadow:0 1px 6px rgba(0,0,0,0.55);
+}
+.hero-proof-label strong{
+  color:var(--lamp-glow);
+  font-weight:600;
+}
+
 /* ── Hero Doors (4 visitor cards inside hero) ── */
 .hero-doors{
   position:relative;z-index:10;
   width:100%;
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:10px;
   padding:0 2rem 0;
   margin-top:auto;
@@ -337,6 +398,7 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
 .footer-links a:hover{color:var(--lamp-glow);}
 .footer-ornament{font-size:14px;letter-spacing:0.4em;color:rgba(193,125,42,0.3);margin-bottom:12px;}
 .footer-copy{font-size:11px;color:rgba(242,232,213,0.2);letter-spacing:0.05em;}
+.footer-contact{font-size:12px;color:rgba(242,232,213,0.45);display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem 1.5rem;margin-bottom:14px;letter-spacing:0.03em;line-height:1.8;}
 
 @media(max-width:600px){
   .nav-links{display:none;}
@@ -818,6 +880,159 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
 }
 @media(max-width:680px){ .community-cards { grid-template-columns: 1fr; } }
 
+/* ── Meeting Info Bar ── */
+.meeting-bar {
+  max-width: 680px;
+  margin: 2.5rem auto 0;
+  background: rgba(193,125,42,0.08);
+  border: 1.5px solid var(--lamp-glow);
+  border-radius: 6px;
+  padding: 1.75rem 2rem 1.5rem;
+  text-align: left;
+}
+.meeting-bar-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+}
+.meeting-bar-line {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+  color: var(--ink-dark);
+  line-height: 1.6;
+}
+.meeting-bar-line-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.meeting-bar-line-label {
+  font-weight: 600;
+  color: var(--ink-dark);
+  margin-right: 0.2rem;
+}
+.meeting-bar-line-value {
+  color: var(--ink-muted);
+}
+.meeting-bar-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: var(--lamp);
+  color: var(--parchment);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 22px;
+  font-size: 13px;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.meeting-bar-whatsapp-btn:hover { background: var(--lamp-glow); }
+@media(max-width:600px){
+  .meeting-bar { padding: 1.4rem 1.25rem 1.25rem; }
+  .meeting-bar-line { font-size: 13px; }
+}
+
+/* ═══════════════════════════════════════════
+   TESTIMONIALS SECTION
+═══════════════════════════════════════════ */
+.testimonials-section {
+  background: var(--parchment-dark);
+  padding: 4rem 2rem 4.5rem;
+  text-align: center;
+  border-top: 1px solid var(--border-warm);
+}
+.testimonials-eyebrow {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  color: var(--stone);
+  margin-bottom: 0.6rem;
+}
+.testimonials-headline {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(22px, 3.5vw, 30px);
+  font-weight: 700;
+  color: var(--ink-dark);
+  margin-bottom: 2.5rem;
+  line-height: 1.35;
+}
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.testimonial-card {
+  background: var(--white-warm);
+  border: 1px solid var(--border-warm);
+  border-radius: 6px;
+  padding: 2rem 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.testimonial-card:hover {
+  border-color: var(--stone-light);
+  box-shadow: 0 6px 20px rgba(92,74,50,0.1);
+}
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2.5px solid var(--lamp-glow);
+  object-fit: cover;
+  background: var(--parchment-deep);
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(92,74,50,0.18);
+}
+.testimonial-quote {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink);
+  position: relative;
+  text-align: center;
+}
+.testimonial-quote::before {
+  content: '\201C';
+  font-size: 48px;
+  line-height: 0;
+  vertical-align: -0.5em;
+  color: var(--lamp-glow);
+  opacity: 0.5;
+  font-family: Georgia, serif;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.testimonial-name {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 13px;
+  color: var(--stone);
+  letter-spacing: 0.06em;
+  border-top: 1px solid var(--border-warm);
+  padding-top: 0.85rem;
+  width: 100%;
+  text-align: center;
+}
+@media(max-width:600px){
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
    /* ═══════════════════════════════════════════
    VISITOR JOURNEY SECTION
 ═══════════════════════════════════════════ */
@@ -948,6 +1163,17 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
   max-width: 560px;
   margin-left: auto;
   margin-right: auto;
+}
+.jesus-verse-pullquote {
+  font-family: 'Noto Serif TC', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--lamp-dim);
+  border-left: 3px solid var(--lamp);
+  padding-left: 1rem;
+  margin: 0 auto 2rem;
+  max-width: 560px;
+  text-align: left;
 }
 .jesus-intro {
   max-width: 680px;
@@ -1636,21 +1862,29 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
   .visitor-cards { grid-template-columns:1fr; }
 }
 
+/* ── About Page: Team Section ── */
+.about-team-section{background:var(--white-warm);padding:3rem 2rem 3.5rem;}
+.about-team-inner{max-width:760px;margin:0 auto;text-align:center;}
+.about-team-title{font-family:'Noto Serif TC',serif;font-size:24px;font-weight:700;color:var(--ink-dark);margin-bottom:0.5rem;}
+.about-team-subtitle{font-size:14px;color:var(--ink-muted);margin-bottom:2.5rem;font-family:'Noto Sans TC',sans-serif;}
+.about-team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+.about-team-card{border:1px solid var(--border-warm);border-radius:6px;padding:1.75rem 1.25rem 1.5rem;display:flex;flex-direction:column;align-items:center;gap:10px;background:var(--white-warm);transition:border-color 0.2s,box-shadow 0.2s;}
+.about-team-card:hover{border-color:var(--stone-light);box-shadow:0 4px 16px rgba(92,74,50,0.09);}
+.about-team-photo{width:96px;height:96px;border-radius:50%;border:2.5px solid var(--lamp);background:var(--parchment-dark);object-fit:cover;flex-shrink:0;}
+.about-team-name{font-family:'Noto Serif TC',serif;font-size:16px;font-weight:700;color:var(--ink-dark);}
+.about-team-context{font-size:12px;color:var(--stone);font-family:'Noto Sans TC',sans-serif;letter-spacing:0.04em;}
+.about-team-bio{font-size:13px;color:var(--ink-muted);font-family:'Noto Sans TC',sans-serif;line-height:1.7;font-style:italic;}
+@media(max-width:600px){.about-team-grid{grid-template-columns:1fr;}}
+
 </style>
 </head>
 <body>
 
 <nav>
-  <div class="nav-logo">
-    <span data-i18n="logo">與主同行·大使命</span>
-    <span data-i18n="logo-sub">Great Commission Platform</span>
-  </div>
-  <div class="nav-links">
-    <a href="javascript:void(0)" class="active" data-i18n="nav-home" data-page="home" onclick="showPage('home')">首頁</a>
-    <a href="javascript:void(0)" data-i18n="nav-bible" data-page="bible" onclick="showPage('bible')">聖經知識庫</a>
-    <a href="javascript:void(0)" data-i18n="nav-resources" data-page="resources" onclick="showPage('resources')">門訓資源</a>
-    <a href="javascript:void(0)" data-i18n="nav-collab" data-page="collab" onclick="showPage('collab')">同工協作</a>
-    <a href="javascript:void(0)" data-i18n="nav-about" data-page="about" onclick="showPage('about')">關於我們</a>
+  <div class="nav-icons">
+    <button class="nav-icon" onclick="document.querySelector('section.hero').scrollIntoView({behavior:'smooth'})" aria-label="首頁">🏠</button>
+    <button class="nav-icon" onclick="showPage('bible')" aria-label="聖經知識庫">📖</button>
+    <button class="nav-icon" onclick="showPage('resources')" aria-label="門訓資源">🤝</button>
   </div>
   <div class="nav-lang">
     <button class="active" onclick="setLang(this)">繁</button>
@@ -1667,38 +1901,35 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
     <p class="hero-eyebrow" data-i18n="eyebrow">修咸頓 · 漢普郡 · 英國 · 普天之下</p>
     <h1 data-i18n="h1">在異鄉，<br>你不需要一個人扛</h1>
     <p class="hero-sub" data-i18n="sub">無論你是剛落腳英國，還是已經住了幾年——這裡有一群人，懂你的掙扎，願意和你同行。</p>
-    <div class="hero-verse" data-i18n="verse">你們不再是外人和客旅，是與聖徒同國，是神家裡的人了· 以弗所書 2:19</div>
+    <div class="hero-cta-wrap">
+      <a href="javascript:void(0)" class="hero-primary-cta" data-i18n="hero-cta-btn">來見見我們 — 週六下午，南安普頓 →</a>
+      <p class="hero-cta-note" data-i18n="hero-cta-note">不需要預約，不需要是基督徒，帶著你自己就好。</p>
+    </div>
   </div>
 
-  <!-- Hero Doors — 4 visitor entry points -->
+  <!-- Social Proof Strip -->
+  <div class="hero-proof">
+    <div class="hero-proof-avatars">
+      <img class="hero-proof-avatar" src="" alt="社群成員" onerror="this.style.background='var(--parchment-deep)'">
+      <img class="hero-proof-avatar" src="" alt="社群成員" onerror="this.style.background='var(--stone-light)'">
+      <img class="hero-proof-avatar" src="" alt="社群成員" onerror="this.style.background='var(--parchment-dark)'">
+    </div>
+    <p class="hero-proof-label" data-i18n="proof-label">已有 <strong>30+</strong> 位香港移民在這裡找到同行者</p>
+  </div>
+
+  <!-- Hero Doors — 2 visitor entry points -->
   <div class="hero-doors">
 
     <div class="hero-door" data-chapter="1" onclick="toggleChapter(1)">
-      <div class="hero-door-dot dot-grey"></div>
-      <div class="hero-door-title" data-i18n="ch1-title">探索者</div>
-      <div class="hero-door-desc" data-i18n="ch1-desc">對信仰好奇，或只是路過看看</div>
-      <div class="hero-door-arrow">›</div>
-    </div>
-
-    <div class="hero-door" data-chapter="2" onclick="toggleChapter(2)">
-      <div class="hero-door-dot dot-blue"></div>
-      <div class="hero-door-title" data-i18n="ch2-title">尋道者</div>
-      <div class="hero-door-desc" data-i18n="ch2-desc">開始親自查考，想做出真實決定</div>
-      <div class="hero-door-arrow">›</div>
+      <div class="hero-door-title" data-i18n="door-a-title">我對信仰還不太了解</div>
+      <div class="hero-door-desc" data-i18n="door-a-desc">從這裡開始，沒有壓力</div>
+      <div class="hero-door-arrow">→</div>
     </div>
 
     <div class="hero-door" data-chapter="3" onclick="toggleChapter(3)">
-      <div class="hero-door-dot dot-green"></div>
-      <div class="hero-door-title" data-i18n="ch3-title">新門徒</div>
-      <div class="hero-door-desc" data-i18n="ch3-desc">已經信主，在生命深處扎根成長</div>
-      <div class="hero-door-arrow">›</div>
-    </div>
-
-    <div class="hero-door" data-chapter="4" onclick="toggleChapter(4)">
-      <div class="hero-door-dot dot-purple"></div>
-      <div class="hero-door-title" data-i18n="ch4-title">同行者</div>
-      <div class="hero-door-desc" data-i18n="ch4-desc">渴望把生命的改變帶給身邊的人</div>
-      <div class="hero-door-arrow">›</div>
+      <div class="hero-door-title" data-i18n="door-b-title">我已經信主，想繼續成長</div>
+      <div class="hero-door-desc" data-i18n="door-b-desc">找到你的下一步</div>
+      <div class="hero-door-arrow">→</div>
     </div>
 
   </div><!-- /hero-doors -->
@@ -1752,6 +1983,39 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
   <div class="scroll-hint"><i class="ti ti-chevron-down" aria-hidden="true"></i></div>
 </section>
 
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS SECTION
+══════════════════════════════════════════ -->
+<section class="testimonials-section">
+  <p class="testimonials-eyebrow" data-i18n="testi-eyebrow">真實的聲音</p>
+  <h2 class="testimonials-headline" data-i18n="testi-headline">他們也曾是陌生人</h2>
+
+  <div class="testimonials-grid">
+
+    <!-- Card 1 -->
+    <div class="testimonial-card">
+      <img class="testimonial-avatar" src="" alt="阿偉" onerror="this.style.background='var(--parchment-deep)'">
+      <p class="testimonial-quote" data-i18n="testi-q1">來英國第一年最難的不是找工作，是沒有人認識你。在這裡，我找到了第一個真正記得我名字的朋友。</p>
+      <p class="testimonial-name" data-i18n="testi-n1">阿偉 · 2022 年移英</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="testimonial-card">
+      <img class="testimonial-avatar" src="" alt="June" onerror="this.style.background='var(--stone-light)'">
+      <p class="testimonial-quote" data-i18n="testi-q2">我不是基督徒，只是朋友帶我來吃飯。結果一吃就停不下來，不只是因為食物。</p>
+      <p class="testimonial-name" data-i18n="testi-n2">June · 南安普頓</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="testimonial-card">
+      <img class="testimonial-avatar" src="" alt="偉明" onerror="this.style.background='var(--parchment-dark)'">
+      <p class="testimonial-quote" data-i18n="testi-q3">這裡的人不會問你幾時返教會，只是陪著你。這對我來說很重要。</p>
+      <p class="testimonial-name" data-i18n="testi-n3">偉明 · 漢普郡</p>
+    </div>
+
+  </div>
+</section>
+
 <div id="homeSections">
 
 
@@ -1791,6 +2055,27 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
     </div>
 
   </div><!-- /community-cards -->
+
+  <!-- ── Meeting Info Bar ── -->
+  <div class="meeting-bar">
+    <div class="meeting-bar-lines">
+      <div class="meeting-bar-line">
+        <span class="meeting-bar-line-icon">📅</span>
+        <span class="meeting-bar-line-label" data-i18n="meeting-day-label">每週六</span>
+        <span class="meeting-bar-line-value" data-i18n="meeting-time">下午 2:00–4:00</span>
+      </div>
+      <div class="meeting-bar-line">
+        <span class="meeting-bar-line-icon">📍</span>
+        <span class="meeting-bar-line-value" data-i18n="meeting-location">Southampton City Centre（地址待確認）</span>
+      </div>
+      <div class="meeting-bar-line">
+        <span class="meeting-bar-line-icon">💬</span>
+        <span class="meeting-bar-line-label" data-i18n="meeting-whatsapp-label">WhatsApp 查詢：</span>
+        <span class="meeting-bar-line-value" data-i18n="meeting-whatsapp-number">[號碼待填]</span>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="meeting-bar-whatsapp-btn" data-i18n="meeting-cta">WhatsApp 我們 →</a>
+  </div>
 
   <div>
     <a href="javascript:void(0)" class="community-cta-btn" data-i18n="comm-cta">來認識我們 →</a>
@@ -1857,6 +2142,7 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
   <p class="jesus-eyebrow">認識耶穌</p>
   <h2 class="jesus-headline">有一個人，兩千年來沒有人能忽視祂</h2>
   <p class="jesus-subheadline">不是宗教規條，不是道德清單——而是一個真實的人，說過讓人無法忽視的話。</p>
+  <blockquote class="jesus-verse-pullquote" data-i18n="verse">你們不再是外人和客旅，是與聖徒同國，是神家裡的人了· 以弗所書 2:19</blockquote>
   <p class="jesus-intro">耶穌不是一個神話，也不只是一個「好人」。祂是一個在真實歷史裡活過的人，說過讓人震驚的話，做過讓人無法解釋的事，然後死去，然後——根據最早的目擊者記錄——祂復活了。無論你現在怎麼看祂，祂的一生值得你用自己的眼睛去看一次。</p>
 
   <div class="jesus-cards">
@@ -2359,6 +2645,58 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
 
 </div><!-- /page-resources -->
 
+<!-- ═══════════════════════════════════════════════
+     關於我們頁  PAGE: ABOUT
+════════════════════════════════════════════════ -->
+<div id="page-about" class="inner-page" style="display:none;">
+
+  <!-- Page Hero -->
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <div class="page-eyebrow" data-i18n="about-eyebrow">南安普頓 · 漢普郡</div>
+      <h1 class="page-title" data-i18n="about-title">關於我們</h1>
+      <p class="page-subtitle" data-i18n="about-subtitle">我們也是移民，也在學習同行。</p>
+    </div>
+  </div>
+
+  <!-- Team Section -->
+  <div class="about-team-section">
+    <div class="about-team-inner">
+      <h2 class="about-team-title" data-i18n="about-team-title">認識我們</h2>
+      <p class="about-team-subtitle" data-i18n="about-team-subtitle">我們也是移民，也在學習同行。</p>
+
+      <div class="about-team-grid">
+
+        <div class="about-team-card">
+          <img class="about-team-photo" src="" alt="團隊成員"
+               onerror="this.style.background='var(--parchment-deep)'">
+          <div class="about-team-name" data-i18n="team-1-name">姓名待填</div>
+          <div class="about-team-context" data-i18n="team-1-context">移英 X 年 · 信仰 X 年</div>
+          <div class="about-team-bio" data-i18n="team-1-bio">簡介待填</div>
+        </div>
+
+        <div class="about-team-card">
+          <img class="about-team-photo" src="" alt="團隊成員"
+               onerror="this.style.background='var(--stone-light)'">
+          <div class="about-team-name" data-i18n="team-2-name">姓名待填</div>
+          <div class="about-team-context" data-i18n="team-2-context">移英 X 年 · 信仰 X 年</div>
+          <div class="about-team-bio" data-i18n="team-2-bio">簡介待填</div>
+        </div>
+
+        <div class="about-team-card">
+          <img class="about-team-photo" src="" alt="團隊成員"
+               onerror="this.style.background='var(--parchment-dark)'">
+          <div class="about-team-name" data-i18n="team-3-name">姓名待填</div>
+          <div class="about-team-context" data-i18n="team-3-context">移英 X 年 · 信仰 X 年</div>
+          <div class="about-team-bio" data-i18n="team-3-bio">簡介待填</div>
+        </div>
+
+      </div><!-- /about-team-grid -->
+    </div><!-- /about-team-inner -->
+  </div><!-- /about-team-section -->
+
+</div><!-- /page-about -->
+
 <footer>
   <div class="footer-inner">
     <div class="footer-logo" data-i18n="footer-logo">大使命門徒協作平台</div>
@@ -2371,6 +2709,11 @@ footer{background:var(--stone-dark);padding:2.5rem 2rem;text-align:center;margin
       <a href="javascript:void(0)">私隱政策</a>
     </div>
     <div class="footer-ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+    <div class="footer-contact">
+      <span data-i18n="footer-email">📧 hello@sccc.org.uk</span>
+      <span data-i18n="footer-whatsapp">💬 WhatsApp：+44 XXXX XXXXXX</span>
+      <span data-i18n="footer-address">📍 Southampton, Hampshire, UK</span>
+    </div>
     <div class="footer-copy" data-i18n="footer-copy">Southampton Chinese Christian Church · 2025 · 以愛心說誠實話</div>
   </div>
 </footer>
@@ -2440,10 +2783,39 @@ const translations = {
     "nav-resources": "門訓資源",
     "nav-collab": "同工協作",
     "nav-about": "關於我們",
+    "about-eyebrow": "南安普頓 · 漢普郡",
+    "about-title": "關於我們",
+    "about-subtitle": "我們也是移民，也在學習同行。",
+    "about-team-title": "認識我們",
+    "about-team-subtitle": "我們也是移民，也在學習同行。",
+    "team-1-name": "姓名待填",
+    "team-1-context": "移英 X 年 · 信仰 X 年",
+    "team-1-bio": "簡介待填",
+    "team-2-name": "姓名待填",
+    "team-2-context": "移英 X 年 · 信仰 X 年",
+    "team-2-bio": "簡介待填",
+    "team-3-name": "姓名待填",
+    "team-3-context": "移英 X 年 · 信仰 X 年",
+    "team-3-bio": "簡介待填",
     "eyebrow": "修咸頓 · 漢普郡 · 英國 · 普天之下",
     "h1": "在異鄉，<br>你不需要一個人扛",
     "sub": "無論你是剛落腳英國，還是已經住了幾年——這裡有一群人，懂你的掙扎，願意和你同行。",
     "verse": "你們不再是外人和客旅，是與聖徒同國，是神家裡的人了· 以弗所書 2:19",
+    "hero-cta-btn": "來見見我們 — 週六下午，南安普頓 →",
+    "hero-cta-note": "不需要預約，不需要是基督徒，帶著你自己就好。",
+    "proof-label": "已有 <strong>30+</strong> 位香港移民在這裡找到同行者",
+    "door-a-title": "我對信仰還不太了解",
+    "door-a-desc": "從這裡開始，沒有壓力",
+    "door-b-title": "我已經信主，想繼續成長",
+    "door-b-desc": "找到你的下一步",
+    "testi-eyebrow": "真實的聲音",
+    "testi-headline": "他們也曾是陌生人",
+    "testi-q1": "來英國第一年最難的不是找工作，是沒有人認識你。在這裡，我找到了第一個真正記得我名字的朋友。",
+    "testi-n1": "阿偉 · 2022 年移英",
+    "testi-q2": "我不是基督徒，只是朋友帶我來吃飯。結果一吃就停不下來，不只是因為食物。",
+    "testi-n2": "June · 南安普頓",
+    "testi-q3": "這裡的人不會問你幾時返教會，只是陪著你。這對我來說很重要。",
+    "testi-n3": "偉明 · 漢普郡",
     "who": "我是誰？選擇你的旅程起點",
     "p1-title": "初信者",
     "p1-desc": "剛信主，尋找根基與牧養群體",
@@ -2472,7 +2844,16 @@ const translations = {
     "read-more": "閱讀全文 →",
     "footer-logo": "大使命門徒協作平台",
     "footer-tagline": "Walking With the Lord · 與主同行",
-    "footer-copy": "Southampton Chinese Christian Church · 2025 · 以愛心說誠實話"
+    "footer-copy": "Southampton Chinese Christian Church · 2025 · 以愛心說誠實話",
+    "footer-email": "📧 hello@sccc.org.uk",
+    "footer-whatsapp": "💬 WhatsApp：+44 XXXX XXXXXX",
+    "footer-address": "📍 Southampton, Hampshire, UK",
+    "meeting-day-label": "每週六",
+    "meeting-time": "下午 2:00–4:00",
+    "meeting-location": "Southampton City Centre（地址待確認）",
+    "meeting-whatsapp-label": "WhatsApp 查詢：",
+    "meeting-whatsapp-number": "[號碼待填]",
+    "meeting-cta": "WhatsApp 我們 →"
   },
   zh_hans: {
     
@@ -2536,10 +2917,39 @@ const translations = {
     "nav-resources": "门训资源",
     "nav-collab": "同工协作",
     "nav-about": "关于我们",
+    "about-eyebrow": "南安普顿 · 汉普郡",
+    "about-title": "关于我们",
+    "about-subtitle": "我们也是移民，也在学习同行。",
+    "about-team-title": "认识我们",
+    "about-team-subtitle": "我们也是移民，也在学习同行。",
+    "team-1-name": "姓名待填",
+    "team-1-context": "移英 X 年 · 信仰 X 年",
+    "team-1-bio": "简介待填",
+    "team-2-name": "姓名待填",
+    "team-2-context": "移英 X 年 · 信仰 X 年",
+    "team-2-bio": "简介待填",
+    "team-3-name": "姓名待填",
+    "team-3-context": "移英 X 年 · 信仰 X 年",
+    "team-3-bio": "简介待填",
     "eyebrow": "修咸顿 · 汉普郡 · 英国 · 普天之下",
     "h1": "在异乡，<br>你不需要一个人扛",
     "sub": "无论你是刚落脚英国，还是已经住了几年——这里有一群人，懂你的挣扎，愿意和你同行。",
     "verse": "你们不再是外人和客旅，是与圣徒同国，是神家里的人了· 以弗所书 2:19",
+    "hero-cta-btn": "来见见我们 — 周六下午，南安普顿 →",
+    "hero-cta-note": "不需要预约，不需要是基督徒，带着你自己就好。",
+    "proof-label": "已有 <strong>30+</strong> 位香港移民在这里找到同行者",
+    "door-a-title": "我对信仰还不太了解",
+    "door-a-desc": "从这里开始，没有压力",
+    "door-b-title": "我已经信主，想继续成长",
+    "door-b-desc": "找到你的下一步",
+    "testi-eyebrow": "真实的声音",
+    "testi-headline": "他们也曾是陌生人",
+    "testi-q1": "来英国第一年最难的不是找工作，是没有人认识你。在这里，我找到了第一个真正记得我名字的朋友。",
+    "testi-n1": "阿伟 · 2022 年移英",
+    "testi-q2": "我不是基督徒，只是朋友带我来吃饭。结果一吃就停不下来，不只是因为食物。",
+    "testi-n2": "June · 南安普顿",
+    "testi-q3": "这里的人不会问你几时回教会，只是陪着你。这对我来说很重要。",
+    "testi-n3": "伟明 · 汉普郡",
     "who": "我是谁？选择你的旅程起点",
     "p1-title": "初信者",
     "p1-desc": "刚信主，寻找根基与牧养群体",
@@ -2568,7 +2978,16 @@ const translations = {
     "read-more": "阅读全文 →",
     "footer-logo": "大使命门徒协作平台",
     "footer-tagline": "Walking With the Lord · 与主同行",
-    "footer-copy": "Southampton Chinese Christian Church · 2025 · 凡你手所当做的事要尽力去做"
+    "footer-copy": "Southampton Chinese Christian Church · 2025 · 凡你手所当做的事要尽力去做",
+    "footer-email": "📧 hello@sccc.org.uk",
+    "footer-whatsapp": "💬 WhatsApp：+44 XXXX XXXXXX",
+    "footer-address": "📍 Southampton, Hampshire, UK",
+    "meeting-day-label": "每周六",
+    "meeting-time": "下午 2:00–4:00",
+    "meeting-location": "Southampton City Centre（地址待确认）",
+    "meeting-whatsapp-label": "WhatsApp 查询：",
+    "meeting-whatsapp-number": "[号码待填]",
+    "meeting-cta": "WhatsApp 我们 →"
   },
   en: {
     
@@ -2632,10 +3051,39 @@ const translations = {
     "nav-resources": "Resources",
     "nav-collab": "Collaboration",
     "nav-about": "About",
+    "about-eyebrow": "Southampton · Hampshire",
+    "about-title": "About Us",
+    "about-subtitle": "We are immigrants too, learning to walk together.",
+    "about-team-title": "Meet the Team",
+    "about-team-subtitle": "We are immigrants too, learning to walk together.",
+    "team-1-name": "Name TBC",
+    "team-1-context": "X years in UK · X years of faith",
+    "team-1-bio": "Bio placeholder",
+    "team-2-name": "Name TBC",
+    "team-2-context": "X years in UK · X years of faith",
+    "team-2-bio": "Bio placeholder",
+    "team-3-name": "Name TBC",
+    "team-3-context": "X years in UK · X years of faith",
+    "team-3-bio": "Bio placeholder",
     "eyebrow": "Southampton · Hampshire · UK · To the Ends of the Earth",
     "h1": "In a foreign land,<br>you don't have to carry it alone",
     "sub": "Whether you just arrived in the UK or have been here for years — there is a community here that understands your struggles and wants to walk with you.",
     "verse": "You are no longer foreigners and strangers, but fellow citizens with God's people and members of his household · Ephesians 2:19",
+    "hero-cta-btn": "Come Meet Us — Saturday Afternoons, Southampton →",
+    "hero-cta-note": "No appointment needed. No need to be a Christian. Just come as you are.",
+    "proof-label": "<strong>30+</strong> Hong Kong immigrants have found community here",
+    "door-a-title": "I don't know much about faith yet",
+    "door-a-desc": "Start here, no pressure",
+    "door-b-title": "I believe, and want to keep growing",
+    "door-b-desc": "Find your next step",
+    "testi-eyebrow": "Real voices",
+    "testi-headline": "They were strangers once too",
+    "testi-q1": "The hardest thing about the first year in the UK wasn't finding work — it was that nobody knew me. Here, I found the first friend who actually remembered my name.",
+    "testi-n1": "Wai · Arrived 2022",
+    "testi-q2": "I'm not a Christian. A friend just brought me for dinner. But I kept coming back — and not just for the food.",
+    "testi-n2": "June · Southampton",
+    "testi-q3": "Nobody here asks when you're going to come back to church. They just stay with you. That matters a lot to me.",
+    "testi-n3": "Wai Ming · Hampshire",
     "who": "Who are you? Choose your starting point",
     "p1-title": "New Believer",
     "p1-desc": "Newly in faith, seeking community and spiritual foundation",
@@ -2664,7 +3112,16 @@ const translations = {
     "read-more": "Read More →",
     "footer-logo": "Great Commission Discipleship Platform",
     "footer-tagline": "Walking With the Lord · 與主同行",
-    "footer-copy": "Southampton Chinese Christian Church · 2025 · Speaking the truth in love"
+    "footer-copy": "Southampton Chinese Christian Church · 2025 · Speaking the truth in love",
+    "footer-email": "📧 hello@sccc.org.uk",
+    "footer-whatsapp": "💬 WhatsApp: +44 XXXX XXXXXX",
+    "footer-address": "📍 Southampton, Hampshire, UK",
+    "meeting-day-label": "Every Saturday",
+    "meeting-time": "2:00–4:00 PM",
+    "meeting-location": "Southampton City Centre (venue to be confirmed)",
+    "meeting-whatsapp-label": "WhatsApp enquiries:",
+    "meeting-whatsapp-number": "[number to be added]",
+    "meeting-cta": "WhatsApp us →"
   }
 };
 
@@ -3144,6 +3601,57 @@ const resourcesData = [
     badge: { zh_hant:'示範條目', zh_hans:'示范条目', en:'Sample Entry' }
   },
 
+  {
+    id: 'a2', type: 'articles',
+    audience: ['new', 'disciple'],
+    title: {
+      zh_hant: '初信者的第一步：查經不需要背景知識',
+      zh_hans: '初信者的第一步：查经不需要背景知识',
+      en: 'First Steps for New Believers: You Don\'t Need Bible Knowledge to Start'
+    },
+    desc: {
+      zh_hant: '很多人以為讀聖經需要先上課、先懂神學。其實耶穌呼召的第一批門徒，沒有一個是「準備好」的人。這篇文章帶你用最簡單的方式，從馬可福音第一章開始。',
+      zh_hans: '很多人以为读圣经需要先上课、先懂神学。其实耶稣呼召的第一批门徒，没有一个是「准备好」的人。这篇文章带你用最简单的方式，从马可福音第一章开始。',
+      en: 'Many people assume you need a course or theology degree before reading the Bible. But none of Jesus\' first disciples were \'ready\'. This article walks you through the simplest way to start — Mark chapter one.'
+    },
+    tags: ['new', 'disciple'],
+    action: { label: { zh_hant:'閱讀全文', zh_hans:'阅读全文', en:'Read Article' }, url: 'javascript:void(0)' }
+  },
+
+  {
+    id: 'a3', type: 'articles',
+    audience: ['disciple', 'trainer'],
+    title: {
+      zh_hant: '門訓不是課程，是關係：耶穌的方法論',
+      zh_hans: '门训不是课程，是关系：耶稣的方法论',
+      en: 'Discipleship Is Relationship, Not Curriculum: Jesus\' Methodology'
+    },
+    desc: {
+      zh_hant: '耶穌沒有開辦神學院，祂只是邀請十二個人跟著祂生活。這篇文章探討耶穌的門訓方式，以及這對今天在英國的我們意味著什麼。',
+      zh_hans: '耶稣没有开办神学院，他只是邀请十二个人跟着他生活。这篇文章探讨耶稣的门训方式，以及这对今天在英国的我们意味着什么。',
+      en: 'Jesus never opened a seminary — he simply invited twelve people to live alongside him. This article explores Jesus\' discipleship model and what it means for us in the UK today.'
+    },
+    tags: ['disciple', 'trainer'],
+    action: { label: { zh_hant:'閱讀全文', zh_hans:'阅读全文', en:'Read Article' }, url: 'javascript:void(0)' }
+  },
+
+  {
+    id: 'a4', type: 'articles',
+    audience: ['new'],
+    title: {
+      zh_hant: '在異鄉信主：移民身份與信仰根基',
+      zh_hans: '在异乡信主：移民身份与信仰根基',
+      en: 'Finding Faith in a Foreign Land: Immigrant Identity and Spiritual Foundation'
+    },
+    desc: {
+      zh_hant: '離開香港，很多人第一次認真思考信仰問題。不是軟弱，而是因為人在陌生環境裡，才能看清楚真正重要的是什麼。這篇文章寫給在英國第一次開始尋找的你。',
+      zh_hans: '离开香港，很多人第一次认真思考信仰问题。不是软弱，而是因为人在陌生环境里，才能看清楚真正重要的是什么。这篇文章写给在英国第一次开始寻找的你。',
+      en: 'Leaving Hong Kong, many people think seriously about faith for the first time. Not weakness — it takes an unfamiliar environment to see clearly what truly matters. This article is for those beginning to search in the UK.'
+    },
+    tags: ['new'],
+    action: { label: { zh_hant:'閱讀全文', zh_hans:'阅读全文', en:'Read Article' }, url: 'javascript:void(0)' }
+  },
+
   // ─── 🎥 影片講道 ───────────────────────────────
   {
     id: 'v1', type: 'videos',
@@ -3217,8 +3725,24 @@ const resourcesData = [
       en: "COCM has served Chinese Christian communities in the UK and Europe for over sixty years, providing gospel resources, church connections and discipleship support. SCCC, the founding church of this platform, is affiliated with COCM."
     },
     tags: ['disciple', 'trainer', 'leader'],
-    action: { label: { zh_hant:'前往網站', zh_hans:'前往网站', en:'Visit Website' }, url: 'https://www.cocm.org.uk' },
-    badge: { zh_hant:'示範條目', zh_hans:'示范条目', en:'Sample Entry' }
+    action: { label: { zh_hant:'前往網站', zh_hans:'前往网站', en:'Visit Website' }, url: 'https://www.cocm.org.uk' }
+  },
+
+  {
+    id: 'l2', type: 'links',
+    audience: ['disciple', 'trainer', 'leader'],
+    title: {
+      zh_hant: '環球華人差傳事工聯絡中心 (CCCOWE)',
+      zh_hans: '环球华人差传事工联络中心 (CCCOWE)',
+      en: 'Chinese Coordination Centre of World Evangelism (CCCOWE)'
+    },
+    desc: {
+      zh_hant: '聯繫全球華人教會差傳事工，提供門訓與宣教資源。',
+      zh_hans: '联系全球华人教会差传事工，提供门训与宣教资源。',
+      en: 'Connecting Chinese churches worldwide in mission, providing discipleship and evangelism resources.'
+    },
+    tags: ['disciple', 'trainer', 'leader'],
+    action: { label: { zh_hant:'前往網站', zh_hans:'前往网站', en:'Visit Website' }, url: 'https://www.cccowe.org' }
   }
 ];
 
