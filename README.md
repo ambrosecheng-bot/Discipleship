@@ -1,6 +1,7 @@
 # 與主同行 · Apprentices of Jesus
 
 > **大使命門徒協作平台** — A discipleship platform for the Hong Kong immigrant community in the UK
+> https://ambrosecheng-bot.github.io/Discipleship/
 
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717?logo=github)](https://ambrosecheng-bot.github.io/Apprentics-Jesus/)
 [![Language](https://img.shields.io/badge/Languages-繁中%20%7C%20简中%20%7C%20EN-C17D2A)](https://ambrosecheng-bot.github.io/Apprentics-Jesus/)
