@@ -6,6 +6,10 @@
 
 「凡你手所當作的事，要盡力去作。」— 傳道書 9:10
 
+**專案位置　Repository:** <https://github.com/ambrosecheng-bot/Discipleship>
+**線上網站　Live (GitHub Pages):** <https://ambrosecheng-bot.github.io/Discipleship/>
+*（啟用 Pages 後生效，見下方「部署」一節。）*
+
 ---
 
 ## 簡介　Overview
@@ -42,10 +46,10 @@
 
 ## 部署到 GitHub Pages　Deploy
 
-1. 建立一個新的 GitHub repository（例如 `disciple-map`）。
-2. 把 `disciple-map-site.html` **改名為 `index.html`**，連同 `README.md` 一起上傳到 repo 根目錄。
+1. 進入本專案 repo：<https://github.com/ambrosecheng-bot/Discipleship>。
+2. 把 `disciple-map-site.html` **改名為 `index.html`**，連同 `README.md` 一起放在 repo 根目錄。
 3. 前往 **Settings → Pages**，在 **Build and deployment → Source** 選 `Deploy from a branch`，分支選 `main`、資料夾選 `/ (root)`，按 **Save**。
-4. 等約 1 分鐘，網站會發佈於 `https://<your-username>.github.io/<repo-name>/`。
+4. 等約 1 分鐘，網站會發佈於 **<https://ambrosecheng-bot.github.io/Discipleship/>**。
 
 > 本機預覽：直接用瀏覽器開啟 `index.html` 即可，無需伺服器。
 
