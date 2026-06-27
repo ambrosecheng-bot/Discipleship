@@ -1,220 +1,120 @@
-# 與主同行 · Apprentices of Jesus
+# 與主同行 · 尋寶之旅　Apprentices of Jesus — The Disciple's Map
 
-> **大使命門徒協作平台** — A discipleship platform for the Hong Kong immigrant community in the UK
-> https://ambrosecheng-bot.github.io/Discipleship/
+> 一個單檔、零相依的門徒旅程網站：以「藏寶圖」為首頁，帶領人從**初遇**走到**差遣倍增**，沿途尋見那藏在地裡的至寶。
+>
+> A single-file, dependency-free website that frames discipleship as a nine-stage treasure map — from a first encounter to becoming a disciple-maker.
 
-[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-181717?logo=github)](https://ambrosecheng-bot.github.io/Apprentics-Jesus/)
-[![Language](https://img.shields.io/badge/Languages-繁中%20%7C%20简中%20%7C%20EN-C17D2A)](https://ambrosecheng-bot.github.io/Apprentics-Jesus/)
-[![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey)](LICENSE)
-[![Founding Church](https://img.shields.io/badge/Founding%20Church-SCCC%20Southampton-2A4A5C)](https://www.cocm.org.uk)
+「凡你手所當作的事，要盡力去作。」— 傳道書 9:10
 
 ---
 
-## 簡介 Overview
+## 簡介　Overview
 
-「與主同行」是一個為**英國香港 BNO 移民基督徒**而建的免費開放門訓平台。
+**與主同行 · 尋寶之旅** 是為在英港人移民（HK immigrants in the UK）而設計的門徒旅程網站。它把跟隨耶穌的歷程，化為一張羊皮紙藏寶圖上的**九站旅程**：每一站提供一項「恩典的管道」，由人親自支取運用，把自己帶到下一個狀態——而這一站的「到」，正是下一站的「從」。
 
-核心理念是 **一個影響一個（One Influencing One）**——每一位跟隨耶穌的門徒，都可以成為下一個人的同行者。平台以修咸頓（Southampton）為起點，服務漢普郡、英國，乃至普天之下的華人門徒。
+設計守住三條原則：
 
-This is a free, open discipleship platform built for **Hong Kong BNO immigrants in the UK**, grounded in the Great Commission and the philosophy of **One Influencing One** — every disciple can become a discipler. Based in Southampton, serving Hampshire, the UK, and the global Chinese diaspora.
+- **基督是主角，不是更好的自己。** 終點的至寶是天國／基督（太 13:44），不是自我實現。
+- **搭橋後離橋。** 旅程的比喻只是進入聖經的橋樑，不取代真實的關係門徒造就。
+- **工具服事葡萄樹。** 純展示與導覽，**不含表單、評分或配對**。
 
----
-
-## 主要功能 Features
-
-### 🚪 訪客入口系統 Visitor Journey System
-- **四類訪客識別**：探索者 · 尋道者 · 新門徒 · 同行者
-- 每類訪客對應個性化路徑，無需宗教背景即可進入
-- 手風琴式九站旅程展開，漸進引導
-
-### 🗺️ 九站門徒旅程 Nine-Station Discipleship Journey
-| 站次 | 名稱 |
-|------|------|
-| S1 | 在黑暗中遇見光 |
-| S2 | 來，跟從我 |
-| S3 | 捨，才能得 |
-| S4 | 在路上學習 |
-| S5 | 幽谷中的功課 |
-| S6 | 從內而外的翻轉 |
-| S7 | 愛的群落 |
-| S8 | 帶著使命出發 |
-| S9 | 終點即起點 |
-
-### 📖 聖經知識庫 Bible Knowledge Base
-- 全文搜索支援
-- 章節導覽
-- 適合個人查考及小組研習
-
-### 🤝 門訓資源庫 Discipleship Resource Library
-- 文章 · 影片 · 書籍 · 工具 · 外部連結
-- 四類受眾標籤篩選：初信者 · 受訓門徒 · 門訓者 · 教會領袖
-- 持續更新
-
-### 🌐 三語切換 Trilingual Support
-- 繁體中文（預設）
-- 簡體中文
-- English
+整個網站是**一個 HTML 檔**，無建置步驟、無框架，只在執行時透過 CDN 載入 Google Fonts。
 
 ---
 
-## 技術架構 Technical Architecture
+## 九站一覽　The Nine Stations
+
+| # | 站　Station | 標題　Title | English | 分期　Phase |
+|---|------|------|---------|------|
+| 1 | 初遇 | 路上相遇 | A Meeting on the Road | 鬆土期 Tilling |
+| 2 | 見證 | 看見改變 | Changed Lives | 鬆土期 Tilling |
+| 3 | 共鳴 | 與我有關 | Closer to Home | 鬆土期 Tilling |
+| 4 | 探問 | 親自查證 | See for Yourself | 鬆土期 Tilling |
+| 5 | 同讀 | 結伴同讀 | Reading Together | 入門期 Entering |
+| 6 | 初嚐主恩 | 親嚐主恩 | Taste and See | 入門期 Entering |
+| 7 | 委身 | 立志跟隨 | Choosing to Follow | 入門期 Entering |
+| 8 | 造就 | 基督成形 | Christ Formed in You | 成全與倍增 Forming & Sending |
+| 9 | 差遣與倍增 | 差遣倍增 | Sent to Multiply | 成全與倍增 Forming & Sending |
+
+每一站頁面包含：紅蠟印站號、四字標題與英文、一句核心、「**從 → 恩典管道 → 到**」的轉化鏈、經文、為何，以及上一站／回地圖／下一站導航與進度標示。第 1 站另附「細看這一站」雙軌散文（耶穌怎樣做 ‖ 在英港人怎樣走）。
+
+---
+
+## 部署到 GitHub Pages　Deploy
+
+1. 建立一個新的 GitHub repository（例如 `disciple-map`）。
+2. 把 `disciple-map-site.html` **改名為 `index.html`**，連同 `README.md` 一起上傳到 repo 根目錄。
+3. 前往 **Settings → Pages**，在 **Build and deployment → Source** 選 `Deploy from a branch`，分支選 `main`、資料夾選 `/ (root)`，按 **Save**。
+4. 等約 1 分鐘，網站會發佈於 `https://<your-username>.github.io/<repo-name>/`。
+
+> 本機預覽：直接用瀏覽器開啟 `index.html` 即可，無需伺服器。
+
+---
+
+## 檔案結構　Files
 
 ```
-與主同行/
-│
-├── index.html          # 完整單頁應用（All-in-one SPA）
-│   ├── <style>         # 內嵌 CSS（CSS variables, responsive grid）
-│   ├── <body>          # 頁面結構
-│   │   ├── nav         # 黏性導覽列 + 三語切換
-│   │   ├── .hero       # Hero Banner（Ken Burns 動效）
-│   │   ├── .hero-doors # 四扇訪客入口門
-│   │   ├── .hero-panel # 九站旅程手風琴面板
-│   │   ├── .testimonials-section  # 見証語錄
-│   │   ├── .community-section     # 社群邀請
-│   │   ├── .journey-section       # 門徒旅程詳覽
-│   │   ├── .cta-banner            # 底部行動橫幅
-│   │   └── footer
-│   └── <script>        # 內嵌 JS（i18n, 資源渲染, 旅程邏輯）
-│
+.
+├── index.html        # 主網站（由 disciple-map-site.html 改名而來）
 └── README.md
 ```
 
-**技術選擇 Tech Stack**
+主網站之外，本專案開發過程亦產出數個**獨立元件檔**（選用，非部署所需）：
 
-| 項目 | 選擇 | 原因 |
-|------|------|------|
-| 架構 | 單一 HTML 檔案 | 零依賴部署，任何靜態主機均可運行 |
-| 字型 | Noto Serif TC / Noto Sans TC / IM Fell English | 支援繁簡中文及英文 |
-| 圖示 | Tabler Icons（CDN） | 輕量開源圖示庫 |
-| 動效 | Pure CSS（Ken Burns, transitions） | 無 JavaScript 動效依賴 |
-| 主機 | GitHub Pages | 免費、可靠、版本控制整合 |
-| i18n | 內建 JS 物件（`data-i18n` 屬性） | 無需外部 i18n 框架 |
+| 檔案 | 用途 |
+|------|------|
+| `disciple-map-site.html` | ⭐ 完整單檔網站（首頁＋九站，建議用作 `index.html`） |
+| `hero-section-disciple-map.html` | 藏寶圖 hero 區塊（獨立版） |
+| `discipleship-journey.html` | 深藍章節風的九站旅程頁（獨立版） |
 
----
-
-## 快速部署 Quick Deploy
-
-### 方法一：Fork 此儲存庫（推薦）
-
-```bash
-# 1. Fork 此 repo 至你的 GitHub 帳號
-# 2. 進入 Settings → Pages → Source: Deploy from branch → main → / (root)
-# 3. 儲存後約 60 秒，網站即上線
-```
-
-### 方法二：本地克隆
-
-```bash
-git clone https://github.com/ambrosecheng-bot/Apprentics-Jesus.git
-cd Apprentics-Jesus
-
-# 直接用瀏覽器開啟（無需本地伺服器）
-open index.html
-
-# 或使用 VS Code Live Server / Python 本地伺服器
-python3 -m http.server 8080
-# 然後訪問 http://localhost:8080
-```
-
-### 方法三：自訂部署至其他靜態主機
-
-本項目為純靜態單頁應用，可部署至任何靜態主機：
-
-- **Netlify**：拖放 `index.html` 至 Netlify Drop
-- **Vercel**：`vercel --prod`
-- **Cloudflare Pages**：連接 GitHub repo，自動部署
+如只部署主網站，可只保留 `index.html`。
 
 ---
 
-## 本地化指引 Localisation Guide
+## 技術說明　Technical Notes
 
-如需為你所在地區的華人社群建立自己的版本，請修改以下部分：
-
-### 1. 地理定位（Hero Eyebrow）
-```html
-<!-- index.html 第 ~1901 行 -->
-<p class="hero-eyebrow" data-i18n="eyebrow">修咸頓 · 漢普郡 · 英國 · 普天之下</p>
-```
-將「修咸頓 · 漢普郡 · 英國」替換為你所在城市及地區。
-
-### 2. 聚會資訊（Meeting Info Bar）
-搜尋 `meeting-bar`，更新聚會時間、地點及聯絡方式。
-
-### 3. CTA 連結
-搜尋 `javascript:void(0)`，替換為你的實際 WhatsApp 連結、Google Form 或聯絡郵件：
-```html
-<!-- 替換前 -->
-<a href="javascript:void(0)" class="hero-primary-cta">來見見我們 →</a>
-
-<!-- 替換後（WhatsApp 示例） -->
-<a href="https://wa.me/447700000000" class="hero-primary-cta" target="_blank">來見見我們 →</a>
-```
-
-### 4. 三語文字內容
-所有翻譯文字集中於 `<script>` 區塊的 `i18n` 物件內，結構如下：
-```javascript
-const i18n = {
-  zh_hant: { eyebrow: "修咸頓 · ...", h1: "在異鄉，你不需要一個人扛", ... },
-  zh_hans: { eyebrow: "修咸顿 · ...", h1: "在异乡，你不需要一个人扛", ... },
-  en:      { eyebrow: "Southampton · ...", h1: "In a foreign land, you don't have to carry it alone", ... }
-};
-```
+- **單檔、零相依**：所有 HTML／CSS／JS 內嵌於一個檔案；外部僅有 Google Fonts（Cinzel、Noto Serif TC、Noto Sans TC）。
+- **手繪地圖**：藏寶圖以 inline SVG 繪製（足跡虛線、九站圖釘、羅盤、羊皮紙做舊濾鏡），縮放清晰、無點陣圖。
+- **頁內路由**：以 JavaScript 攔截 `#` 錨點點擊切換頁面，並以 `history.replaceState` 同步網址——可同時在 GitHub Pages 與沙箱式預覽器（如各種 iframe 嵌入）中正常運作，不會觸發整頁重載。
+- **響應式**：桌面為「標題疊在地圖上」，手機自動改為「標題在上、地圖在下」堆疊，九站全部可見。
+- **無障礙**：里程碑與導覽可鍵盤操作、具 `aria-label`；尊重 `prefers-reduced-motion`。
+- **無追蹤、無表單、無第三方腳本。**
 
 ---
 
-## 貢獻指引 Contributing
+## 客製化　Customisation
 
-歡迎以下形式的貢獻：
+所有內容集中在主檔 `<script>` 中的 `STATIONS` 陣列，修改即更新地圖與九個分頁：
 
-- **內容貢獻**：補充門訓資源（文章、書籍、工具推薦）→ 提交 Issue 或 PR，修改 `resourcesData` 陣列
-- **翻譯改善**：修正或補充三語翻譯 → 修改 `i18n` 物件
-- **Bug 回報**：在 Issues 頁面描述問題及重現步驟
-- **功能建議**：在 Discussions 分享你的想法
-
-### PR 規範
-
-```
-類型: 簡短描述（繁體中文或英文均可）
-
-例：
-content: 新增《門徒的代價》書籍至資源庫
-fix: 修復手機版導覽列顯示問題
-i18n: 更新英文版 Hero 副標題
+```js
+{ n:1, name:"初遇", title:"路上相遇", en:"A Meeting on the Road", phase:"tilling",
+  x:130, y:558, lx:0, ly:-32, anchor:"middle",
+  one:"門徒之路由關係起步，不由論證起步。",
+  from:"從未把福音當作與自己有關的人",
+  means:"一位門徒真誠的友誼與生命接觸。",
+  to:"知道世上有一條「與主同行」的活法，值得一探",
+  ref:"約 1:39、46", verse:"「你來看。」",
+  why:"人先信任傳遞者，才聽得進信息。" }
 ```
 
----
-
-## 發起教會 Founding Church
-
-本平台由 **Southampton Chinese Christian Church（SCCC，修咸頓中國基督教會）** 發起，附屬於 **海外華人基督教使命（COCM）** 旗下。
-
-SCCC 是本平台的創始夥伴，但平台的異象和資源服務全球所有華人門訓社群，不限於任何單一教會。
-
-> The platform was initiated by SCCC but is open to the global Chinese discipleship community. Any church or ministry is welcome to fork, adapt, and deploy their own version.
+- **改文字**：編輯 `title / en / one / from / means / to / ref / verse / why`。
+- **改地圖位置**：`x, y` 為里程碑座標（viewBox `1200 × 760`）；`lx, ly, anchor` 為標籤偏移與對齊。
+- **加「細看這一站」散文**：參考第 1 站的 `ESSAY_ST1` 寫法，於模板中以 `${s.n===N ? ESSAY_STN : ""}` 注入。
+- **改配色／字體**：調整 `:root` 的 CSS 變數（`--paper`、`--ink`、`--ochre`、`--seal`、字體變數等）。
 
 ---
 
-## 授權 License
+## 授權　License
 
-本項目內容採用 [Creative Commons BY-NC 4.0](LICENSE) 授權：
+- **程式碼（HTML／CSS／JS 結構）**：採 [MIT License](https://opensource.org/licenses/MIT)，歡迎自由取用與修改。
+- **文字、散文與神學內容**：© Ambrose Cheng（鄭君成），**保留版權**。歡迎個人與教會在非商業的門徒造就場景中使用與分享，但請勿在未經授權下作商業用途或修改後再發佈。
 
-- ✅ 可自由分享及改編
-- ✅ 須署名原作者
-- ❌ 不可用於商業用途
-
-聖經引文版權歸各版本出版機構所有。
+> 建議另建一個 `LICENSE` 檔放置 MIT 全文（程式碼部分）。如需，我可另外為你產生。
 
 ---
 
-## 聯絡 Contact
+## 致謝與異象　Vision
 
-- **平台網址**：[ambrosecheng-bot.github.io/Apprentics-Jesus](https://ambrosecheng-bot.github.io/Apprentics-Jesus/)
-- **發起教會**：[SCCC · Southampton Chinese Christian Church](https://www.cocm.org.uk)
-- **Issues / PR**：歡迎直接在本 repo 提交
+本專案服事「**一個影響一個**（One Influencing One）」的門徒倍增異象——門徒的終點，是成為另一個人的起點。
 
----
-
-<p align="center">
-  <em>一個影響一個 · One Influencing One</em><br>
-  <small>提摩太後書 2:2 · 2 Timothy 2:2</small>
-</p>
+*Soli Deo Gloria.*
