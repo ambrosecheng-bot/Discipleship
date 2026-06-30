@@ -1,124 +1,94 @@
-# 與主同行 · 尋寶之旅　Apprentices of Jesus — The Disciple's Map
+# 分享天國福音 · 招訓基督門徒
 
-> 一個單檔、零相依的門徒旅程網站：以「藏寶圖」為首頁，帶領人從**初遇**走到**差遣倍增**，沿途尋見那藏在地裡的至寶。
->
-> A single-file, dependency-free website that frames discipleship as a nine-stage treasure map — from a first encounter to becoming a disciple-maker.
+一個以「藏寶圖」為視覺框架的單頁門徒成長網站（single-file SPA），陪伴在英港人從初遇福音到差遣倍增，走過一段九站的旅程。
 
-「凡你手所當作的事，要盡力去作。」— 傳道書 9:10
-
-**專案位置　Repository:** <https://github.com/ambrosecheng-bot/Discipleship>
-**線上網站　Live (GitHub Pages):** <https://ambrosecheng-bot.github.io/Discipleship/>
-*（啟用 Pages 後生效，見下方「部署」一節。）*
+> 「使萬民作我的門徒」——本網站以九個站點，把整個門徒之路化為一條可看見、可同行的路徑：從**分享福音**，到**主裡成長**，到**門徒倍增**；被倍增的門徒，又回到分享福音，親手陪下一個。週而復始，一個影響一個。
 
 ---
 
-## 簡介　Overview
+## 內容架構
 
-**與主同行 · 尋寶之旅** 是為在英港人移民（HK immigrants in the UK）而設計的門徒旅程網站。它把跟隨耶穌的歷程，化為一張羊皮紙藏寶圖上的**九站旅程**：每一站提供一項「恩典的管道」，由人親自支取運用，把自己帶到下一個狀態——而這一站的「到」，正是下一站的「從」。
+全程分為三個階段、共九站：
 
-設計守住三條原則：
+| 階段 | 站點 | 主題 |
+|------|------|------|
+| **① 分享福音**（鬆土期） | 1 路上相遇 · 2 看見改變 · 3 與我有關 · 4 親自查證 | 由關係與真實的渴切入，邀請對方親自查證 |
+| **② 主裡成長**（入門期） | 5 結伴同讀 · 6 親嚐主恩 · 7 立志跟隨 | 在陪伴中經歷神，誠實算過代價後自由委身 |
+| **③ 門徒倍增**（成全與倍增） | 8 基督成形 · 9 差遣倍增 | 在群體中被塑造，再轉身親手陪下一個 |
 
-- **基督是主角，不是更好的自己。** 終點的至寶是天國／基督（太 13:44），不是自我實現。
-- **搭橋後離橋。** 旅程的比喻只是進入聖經的橋樑，不取代真實的關係門徒造就。
-- **工具服事葡萄樹。** 純展示與導覽，**不含表單、評分或配對**。
-
-整個網站是**一個 HTML 檔**，無建置步驟、無框架，只在執行時透過 CDN 載入 Google Fonts。
-
----
-
-## 九站一覽　The Nine Stations
-
-| # | 站　Station | 標題　Title | English | 分期　Phase |
-|---|------|------|---------|------|
-| 1 | 初遇 | 路上相遇 | A Meeting on the Road | 鬆土期 Tilling |
-| 2 | 見證 | 看見改變 | Changed Lives | 鬆土期 Tilling |
-| 3 | 共鳴 | 與我有關 | Closer to Home | 鬆土期 Tilling |
-| 4 | 探問 | 親自查證 | See for Yourself | 鬆土期 Tilling |
-| 5 | 同讀 | 結伴同讀 | Reading Together | 入門期 Entering |
-| 6 | 初嚐主恩 | 親嚐主恩 | Taste and See | 入門期 Entering |
-| 7 | 委身 | 立志跟隨 | Choosing to Follow | 入門期 Entering |
-| 8 | 造就 | 基督成形 | Christ Formed in You | 成全與倍增 Forming & Sending |
-| 9 | 差遣與倍增 | 差遣倍增 | Sent to Multiply | 成全與倍增 Forming & Sending |
-
-每一站頁面包含：紅蠟印站號、四字標題與英文、一句核心、「**從 → 恩典管道 → 到**」的轉化鏈、經文、為何，以及上一站／回地圖／下一站導航與進度標示。第 1 站另附「細看這一站」雙軌散文（耶穌怎樣做 ‖ 在英港人怎樣走）。
+每一站皆有：一句核心、聖經根據與經文、「耶穌怎樣做／在英港人怎樣走」的對照默想，以及一幅同一畫風的羊皮紙插圖。
 
 ---
 
-## 部署到 GitHub Pages　Deploy
+## 技術說明
 
-1. 進入本專案 repo：<https://github.com/ambrosecheng-bot/Discipleship>。
-2. 把 `disciple-map-site.html` **改名為 `index.html`**，連同 `README.md` 一起放在 repo 根目錄。
-3. 前往 **Settings → Pages**，在 **Build and deployment → Source** 選 `Deploy from a branch`，分支選 `main`、資料夾選 `/ (root)`，按 **Save**。
-4. 等約 1 分鐘，網站會發佈於 **<https://ambrosecheng-bot.github.io/Discipleship/>**。
+刻意採用**極簡、零建置（zero-build）**的架構，方便長期維護與部署：
 
-> 本機預覽：直接用瀏覽器開啟 `index.html` 即可，無需伺服器。
+- **單一檔案**：整個網站就是一個 `index.html`，包含 HTML、CSS、JavaScript。
+- **離線自足的圖片**：所有插圖以 base64 內嵌（含九站橫幅與首頁標題橫幅，桌面／手機各一版，透過 `<picture>` 響應式切換），不依賴任何外部圖床。
+- **唯一外部依賴**：Google Fonts（`Cinzel`、`Noto Serif TC`、`Noto Sans TC`）。其餘完全自足。
+- **前端路由**：以 URL hash 驅動的簡易 SPA 路由（`#home`、`#st-1` … `#st-9`），支援瀏覽器前進／後退。
+- **無框架、無打包工具**：純原生 HTML/CSS/JS，不需 Node、npm 或任何 build step。
+- **響應式**：手機、平板、桌面自適應；繁體中文（`lang="zh-Hant"`）。
+
+### 設計系統
+
+- **色盤**：羊皮紙 `#e8d2a0`、墨 `#3f2c12`、赭金 `#bd8e38`、點綴紅 `#a23527`。
+- **字體**：標題用 `Cinzel` + `Noto Serif TC`，內文用 `Noto Sans TC`。
+- **視覺母題**：羅盤、蜿蜒小路、足跡、木牌、微光十架——統一的古地圖手稿風格。
 
 ---
 
-## 檔案結構　Files
+## 本機預覽
 
-```
-.
-├── index.html        # 主網站（由 disciple-map-site.html 改名而來）
-└── README.md
+因為是純靜態檔案，任選一種方式：
+
+```bash
+# 方式一：直接用瀏覽器開啟
+open index.html        # macOS
+start index.html       # Windows
+
+# 方式二：起一個本機伺服器（路由與字體載入更接近正式環境）
+python3 -m http.server 8000
+# 然後瀏覽 http://localhost:8000
 ```
 
-主網站之外，本專案開發過程亦產出數個**獨立元件檔**（選用，非部署所需）：
+---
 
-| 檔案 | 用途 |
-|------|------|
-| `disciple-map-site.html` | ⭐ 完整單檔網站（首頁＋九站，建議用作 `index.html`） |
-| `hero-section-disciple-map.html` | 藏寶圖 hero 區塊（獨立版） |
-| `discipleship-journey.html` | 深藍章節風的九站旅程頁（獨立版） |
+## 部署（GitHub Pages）
 
-如只部署主網站，可只保留 `index.html`。
+1. 將 `index.html` 推送到 repository。
+2. 在 repository 的 **Settings → Pages** 中，選擇要發佈的分支（例如 `main`）與根目錄（`/root`）。
+3. 稍候片刻，網站即可透過 GitHub Pages 網址瀏覽。
+
+> 由於整站為單一檔案，不需任何 build 或 CI 流程；推送即部署。
 
 ---
 
-## 技術說明　Technical Notes
+## 編輯指南
 
-- **單檔、零相依**：所有 HTML／CSS／JS 內嵌於一個檔案；外部僅有 Google Fonts（Cinzel、Noto Serif TC、Noto Sans TC）。
-- **手繪地圖**：藏寶圖以 inline SVG 繪製（足跡虛線、九站圖釘、羅盤、羊皮紙做舊濾鏡），縮放清晰、無點陣圖。
-- **頁內路由**：以 JavaScript 攔截 `#` 錨點點擊切換頁面，並以 `history.replaceState` 同步網址——可同時在 GitHub Pages 與沙箱式預覽器（如各種 iframe 嵌入）中正常運作，不會觸發整頁重載。
-- **響應式**：桌面為「標題疊在地圖上」，手機自動改為「標題在上、地圖在下」堆疊，九站全部可見。
-- **無障礙**：里程碑與導覽可鍵盤操作、具 `aria-label`；尊重 `prefers-reduced-motion`。
-- **無追蹤、無表單、無第三方腳本。**
+### 修改站點內容
 
----
+九站的核心資料集中在 `index.html` 內的 `STATIONS` 陣列。每一站是一個物件，欄位包括站名、標題、階段、核心句、經文出處與經文、默想內容等。修改文字只需編輯對應欄位，頁面會依陣列自動生成。
 
-## 客製化　Customisation
+### 更換或新增插圖
 
-所有內容集中在主檔 `<script>` 中的 `STATIONS` 陣列，修改即更新地圖與九個分頁：
+- 每幅插圖以 `BANNER_ST{n}` 常數（base64 data URI）定義，並由 `BANNERS` 對照表掛到各站。
+- 站點橫幅與首頁標題橫幅皆採「桌面寬幅 + 手機直幅」兩版，透過 `<picture>` 的 `media` 查詢切換。
+- 若日後圖片量持續增加，可考慮把 base64 內嵌圖改為 repository 內的外部圖檔（如 `/images/`）以縮小單檔體積、善用瀏覽器快取。
 
-```js
-{ n:1, name:"初遇", title:"路上相遇", en:"A Meeting on the Road", phase:"tilling",
-  x:130, y:558, lx:0, ly:-32, anchor:"middle",
-  one:"門徒之路由關係起步，不由論證起步。",
-  from:"從未把福音當作與自己有關的人",
-  means:"一位門徒真誠的友誼與生命接觸。",
-  to:"知道世上有一條「與主同行」的活法，值得一探",
-  ref:"約 1:39、46", verse:"「你來看。」",
-  why:"人先信任傳遞者，才聽得進信息。" }
-```
+### 階段與色彩
 
-- **改文字**：編輯 `title / en / one / from / means / to / ref / verse / why`。
-- **改地圖位置**：`x, y` 為里程碑座標（viewBox `1200 × 760`）；`lx, ly, anchor` 為標籤偏移與對齊。
-- **加「細看這一站」散文**：參考第 1 站的 `ESSAY_ST1` 寫法，於模板中以 `${s.n===N ? ESSAY_STN : ""}` 注入。
-- **改配色／字體**：調整 `:root` 的 CSS 變數（`--paper`、`--ink`、`--ochre`、`--seal`、字體變數等）。
+三階段（`tilling` / `entering` / `forming`）的名稱、圖示與顏色定義在 `PHASES` 與 `CAT` 物件中，調整一處即全站同步。
 
 ---
 
-## 授權　License
+## 關於本專案
 
-- **程式碼（HTML／CSS／JS 結構）**：採 [MIT License](https://opensource.org/licenses/MIT)，歡迎自由取用與修改。
-- **文字、散文與神學內容**：© Ambrose Cheng（鄭君成），**保留版權**。歡迎個人與教會在非商業的門徒造就場景中使用與分享，但請勿在未經授權下作商業用途或修改後再發佈。
+本網站是一項門徒培育事工的數位工具，服事在英國重新落腳的港人群體。內容以聖經為本，強調**關係先於宣講、邀請先於指控、倍增重於加添**——願它成為一座橋，陪人走上與主同行的路。
 
-> 建議另建一個 `LICENSE` 檔放置 MIT 全文（程式碼部分）。如需，我可另外為你產生。
+插圖與文字為事工用途之原創內容。如需取用、改作或部署於其他群體，歡迎按你的處境調整；若公開散布，請保留事工原意與出處。
 
 ---
 
-## 致謝與異象　Vision
-
-本專案服事「**一個影響一個**（One Influencing One）」的門徒倍增異象——門徒的終點，是成為另一個人的起點。
-
-*Soli Deo Gloria.*
+*「無論你手所當作的事，要盡力去作。」（傳道書 9:10）*
